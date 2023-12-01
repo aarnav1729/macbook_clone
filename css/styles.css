@@ -1,0 +1,1576 @@
+* {
+    box-sizing: border-box;
+}
+
+/*import custom fonts*/
+@font-face {
+    font-family: "sf-text-regular";
+    src: url("../fonts/sf-pro/sf-pro-text_regular.woff2");
+}
+
+@font-face {
+    font-family: "sf-display-regular";
+    src: url("../fonts/sf-pro/sf-pro-display_regular.woff2");
+}
+
+@font-face {
+    font-family: "sf-display-medium";
+    src: url("../fonts/sf-pro/sf-pro-display_medium.woff2");
+}
+
+@font-face {
+    font-family: "sf-text-semibold";
+    src: url("../fonts/sf-pro/sf-pro-text_semibold.woff2");
+}
+
+@font-face {
+    font-family: "sf-display-semibold";
+    src: url("../fonts/sf-pro/sf-pro-display_semibold.woff2");
+}
+
+@font-face {
+    font-family: "sf-display-bold";
+    src: url("../fonts/sf-pro/sf-pro-display_bold.woff2");
+}
+
+/*main styles*/
+body {
+    font-family: "sf-text-regular", Arial, Helvetica, sans-serif;
+    background-color: #000000;
+}
+
+.link {
+    text-decoration: none;
+    color: #2997ff;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.bi-chevron-right-small {
+    width: 8px;
+    height: 8px;
+    margin-left: 4px;
+}
+
+#bi-chevron-right {
+    width: 11px;
+    height: 11px;
+}
+
+/*navigation and header styles*/
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    height: 3rem;
+    color: #cbcbcb;
+    background-color: #000000eb;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-links {
+    display: none;
+}
+
+nav ul li a {
+    color: #cbcbcb;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-family: "sf-text-regular", Arial, Helvetica, sans-serif;
+}
+
+#active {
+    color: #969697;
+}
+
+#active:hover {
+    text-decoration: none;
+}
+
+.nav-icons {
+    width: 1rem;
+    height: 1rem;
+}
+
+.apple-icon:hover {
+    color: #fff;
+}
+
+.banner-menu {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: #eaeaea;
+}
+
+.nav-banner-1 {
+    height: 3rem;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141416f9;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+.nav-banner-2 {
+    padding: 0.6rem 1.6rem;
+    background-color: #141416;
+}
+
+.nav-banner-1 p {
+    margin: 0 auto 0 0;
+    color: #eaeaea;
+    font-family: "sf-display-medium";
+    font-size: 1.2rem;
+}
+
+.nav-banner-2 p {
+    text-align: center;
+    font-family: "sf-text-regular";
+    color: #eaeaea;
+    font-size: 0.8rem;
+    margin: 0;
+    line-height: 1.6em;
+}
+
+.nav-btn {
+    border: none;
+    font-family: "sf-text-regular";
+    padding: 0.3rem 0.9rem;
+    margin-left: 0.8rem;
+    border-radius: 1.25rem;
+    background-color: #147ce5;
+    color: #fff;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+}
+
+.nav-btn:hover {
+    cursor: pointer;
+    background-color: #0050a2;
+}
+
+.banner-links {
+    display: none;
+}
+
+.content {
+    padding: 16px;
+}
+
+/* the sticky class is added to the header with in script.js when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+/* added some top padding to the page content to prevent sudden quick movement (as the header gets a new
+position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
+}
+/*end of header styles*/
+
+/*feature content*/
+.feature-image-container {
+    margin: 3rem 0 2rem 0;
+    width: 100%;
+}
+
+.feature-image {
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.main-header-text {
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.main-header-text h2 {
+    color: #f5f5f7;
+    font-size: 1.3rem;
+    margin: 0;
+    font-family: "sf-text-regular";
+}
+
+.main-header-text h3 {
+    font-size: 1.8rem;
+    margin: 0.625rem 0;
+    font-family: "sf-display-bold";
+    background: radial-gradient(#eff1ff, #000);
+    background-size: 100% 200%;
+    background-position: 50% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-header-text p,
+.m1-section p {
+    text-align: center;
+    font-family: "sf-display-medium";
+    color: #a1a1a6;
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+}
+
+.m1-section p {
+    text-align: left;
+}
+
+.m1-apple-heading {
+    display: flex;
+    align-items: flex-start;
+}
+
+.apple-2 {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.m1-section {
+    margin-top: 6rem;
+    padding: 0 1.5rem;
+    position: relative;
+}
+
+.m1-icon {
+    width: 120px;
+}
+
+.m1-section h2 {
+    font-size: 1.75rem;
+    color: #9b9b9b;
+    font-family: "sf-bold";
+    margin-bottom: 0.625rem;
+}
+
+.m1-section h3 {
+    margin: 0;
+    color: #f4f4f4;
+    font-size: 3.3rem;
+    line-height: 1.2em;
+    font-family: "sf-display-bold";
+}
+
+.m1-small {
+    width: 5.625rem;
+}
+
+#event-link {
+    color: #ddd;
+}
+
+#event-link a {
+    color: white;
+    text-decoration: none;
+}
+
+#event-link a:hover {
+    text-decoration: underline;
+}
+
+.m1-chip-big {
+    width: 100%;
+}
+/*end of feature styles*/
+
+/*cpu section styles*/
+.cpu-section {
+    background: linear-gradient(
+        to right top,
+        #194189 0%,
+        #3b4980 25%,
+        #8738a7 100%
+    );
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 65rem;
+}
+
+.cpu-section h2 {
+    color: #c48cfc;
+    font-family: "sf-display-bold";
+    font-size: 2.5rem;
+    line-height: 1.25em;
+    margin-bottom: 0;
+}
+
+.cpu-section h3 {
+    color: #ffffff;
+    font-family: "sf-display-bold";
+    font-size: 2.5rem;
+    line-height: 1.25em;
+    margin: 0;
+}
+
+.cpu-section p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    font-family: "sf-display-medium";
+}
+
+.cpu-section small {
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: "sf-display-medium";
+}
+
+.cpu-image img {
+    width: 40rem;
+}
+
+.cpu-text {
+    padding: 2rem 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.cpu-btn,
+.ml-btn {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.cpu-btn:hover,
+.ml-btn:hover {
+    cursor: pointer;
+}
+/*end of cpu section styles*/
+
+/*gpu section styles*/
+.gpu-section {
+    background: url("../images/backgrounds/game-gpu-section.jpg");
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    margin-top: 2rem;
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.gpu-section-left h2 {
+    color: #4593ac;
+    font-size: 2.6rem;
+    font-family: "sf-display-bold";
+    margin-bottom: 0;
+    margin-top: 2rem;
+    line-height: 1.25em;
+    text-align: left;
+}
+
+.gpu-section-left h3 {
+    color: #fff;
+    font-size: 2.6rem;
+    font-family: "sf-display-bold";
+    margin: 0;
+    line-height: 1.25em;
+    text-align: left;
+}
+
+.gpu-section-left {
+    margin-bottom: 3rem;
+}
+
+.gpu-small {
+    color: #fff;
+    font-family: "sf-display-medium";
+    font-size: 1.2rem;
+}
+
+.gpu-section-right {
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 20rem;
+    margin: 0 auto;
+}
+
+.gpu-section-right small {
+    font-size: 1.2rem;
+}
+
+.gpu-section-right p {
+    margin: 0;
+    font-size: 5.5rem;
+    font-family: "sf-display-bold";
+}
+
+.gpu-btn,
+.thermal-btn {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+/*end of gpu section styles*/
+
+/* grid section one  */
+.battery-section {
+    background: linear-gradient(to bottom, #203025 0%, #151516 100%);
+    margin: 2rem 0;
+    height: auto;
+    padding: 2.5rem 1rem;
+    position: relative;
+}
+
+.battery-small {
+    position: absolute;
+    color: #fff;
+    font-family: "sf-display-medium";
+    font-size: 1.2rem;
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+.battery-section h3 {
+    color: white;
+    text-align: center;
+    padding: 0 1.5rem;
+    font-size: 3rem;
+    line-height: 1.2em;
+    max-width: 20rem;
+    margin: 4rem auto;
+    font-family: "sf-display-bold";
+}
+
+.thermal-section {
+    background: linear-gradient(
+        225deg,
+        #1623a6 0%,
+        #3343d4 29%,
+        #175eac 73%,
+        #176682 100%
+    );
+    margin: 2rem 0;
+    height: 35rem;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.thermal-small {
+    color: #fff;
+    font-family: "sf-display-medium";
+    font-size: 1.2rem;
+}
+
+.thermal-text {
+    font-size: 2.5rem;
+    line-height: 0.3em;
+    font-family: "sf-display-bold";
+    color: #fff9;
+}
+
+.thermal-text > h3:nth-child(3) {
+    color: white;
+}
+
+.thermal-section button {
+    max-width: 15rem;
+}
+
+.ml-section {
+    background: linear-gradient(to bottom, #061420 0%, #151516 100%);
+    height: 40rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.ml-text {
+    color: #a1a1a6;
+    padding: 2rem 1.3rem;
+}
+
+.ml-text small {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.ml-text p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    font-family: "sf-display-medium";
+}
+
+.ml-text span {
+    color: #f5f5f7;
+}
+
+.ml-image img {
+    width: 20rem;
+    margin-right: auto;
+}
+
+/*media queries*/
+
+/*small devices*/
+@media (min-width: 640px) {
+    
+    /*header styles*/
+    .nav-banner-1 {
+        padding: 0 1rem;
+    }
+
+    .nav-banner-2 {
+        height: 3rem;
+        padding: 0 1.6rem;
+        background-color: #141416fc;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .main-header-text {
+        padding: 0 2rem;
+    }
+
+    .main-header-text h2 {
+        font-size: 1.3rem;
+    }
+
+    .main-header-text p,
+    .m1-section p {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+    }
+
+    .main-header-text h3 {
+        font-size: 3rem;
+    }
+
+    .feature-image-container {
+        margin: 3rem 0 2rem 0;
+    }
+
+    .feature-image {
+        padding: 0 4rem;
+    }
+
+    .m1-small-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .m1-small {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .m1-apple-heading {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .apple-2 {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .m1-section {
+        margin: 6rem 4rem;
+    }
+
+    .m1-section h2 {
+        font-size: 2.875rem;
+        margin-bottom: 0.625rem;
+    }
+
+    .m1-section h3 {
+        margin: 0;
+        font-size: 4.5rem;
+    }
+
+    .m1-icon {
+        width: 140px;
+    }
+
+    .m1-section {
+        padding: 0;
+    }
+
+    .m1-image {
+        margin-top: -3.125rem;
+    }
+
+    #bi-chevron-right {
+        width: 14px;
+        height: 14px;
+    }
+
+    /*cpu section styles*/
+    .cpu-section {
+        border-radius: 1rem;
+        margin: 3rem 5rem;
+        display: flex;
+        flex-direction: column;
+        height: 60rem;
+    }
+
+    .cpu-section h2 {
+        font-size: 3.5rem;
+        line-height: 1.1em;
+        margin-bottom: 0;
+        margin-top: 1.9rem;
+    }
+
+    .cpu-section h3 {
+        font-size: 3.5rem;
+        line-height: 1.1em;
+        margin: 0;
+    }
+
+    .cpu-section p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    .cpu-image img {
+        width: 35rem;
+    }
+
+    .cpu-text {
+        padding: 0 2rem;
+        margin-top: 2rem;
+        align-self: flex-end;
+    }
+
+    .cpu-btn,
+    .ml-btn {
+        font-size: 1rem;
+    }
+
+    /*gpu sectio styles*/
+    .gpu-section {
+        padding: 3rem 1.5rem;
+        margin: 3rem 5rem;
+        position: relative;
+        border-radius: 1rem;
+    }
+
+    .gpu-small {
+        position: absolute;
+        font-size: 1.5rem;
+        top: 20px;
+        left: 25px;
+    }
+
+    .gpu-section-left h2 {
+        font-size: 3.3rem;
+        margin-top: 2rem;
+        line-height: 1.25em;
+        text-align: left;
+    }
+
+    .gpu-section-left h3 {
+        font-size: 3.3rem;
+        margin: 0;
+        line-height: 1.25em;
+        text-align: left;
+    }
+
+    .gpu-section-left {
+        margin-bottom: 2rem;
+    }
+
+    .gpu-section-right {
+        margin: 0 auto;
+    }
+
+    .gpu-small {
+        font-family: "sf-display-medium";
+        font-size: 1.2rem;
+    }
+
+    .gpu-section-right small {
+        font-size: 1.2rem;
+        font-family: "sf-display-medium";
+    }
+
+    .gpu-section-right p {
+        margin: 0;
+        font-size: 7rem;
+    }
+
+    .battery-section {
+        margin: 3rem 5rem;
+        border-radius: 1rem;
+    }
+
+    .thermal-section {
+        margin: 3rem 5rem;
+        border-radius: 1rem;
+        height: 33rem;
+        position: relative;
+    }
+
+    .ml-section {
+        margin: 3rem 5rem;
+        border-radius: 1rem;
+        height: 45rem;
+    }
+
+    .ml-text p {
+        font-size: 1.2rem;
+    }
+
+    .ml-image img {
+        width: 30rem;
+    }
+}
+
+/* medium devices*/
+@media (min-width: 768px) {
+
+    /*header section styles*/
+    .main-header-text {
+        padding: 0 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-header-text p,
+    .m1-section p {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+
+    .m1-section p {
+        max-width: 40rem;
+    }
+
+    .main-header-text h3 {
+        font-size: 4.3rem;
+    }
+
+    .main-header-text h2 {
+        font-size: 1.563rem;
+    }
+
+    .feature-image-container {
+        margin: 3rem 0 3rem 0;
+    }
+
+    .feature-image {
+        padding: 0 0 0 2rem;
+    }
+
+    .m1-small-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .m1-small {
+        margin-left: auto;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .apple-2 {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+
+    .m1-section {
+        margin: 7rem 6rem 0 4rem;
+    }
+
+    .m1-section h2 {
+        font-size: 3.75rem;
+        margin-bottom: 0.625rem;
+    }
+
+    .m1-section h3 {
+        margin: 0;
+        font-size: 3.5rem;
+    }
+
+    #bi-chevron-right {
+        width: 16px;
+        height: 16px;
+    }
+
+    /*cpu section styles*/
+    .cpu-section {
+        padding: 2rem 0 4rem 0;
+        border-radius: 1rem;
+        margin: 2rem;
+        position: relative;
+        height: 50rem;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .cpu-section h2 {
+        font-size: 2.6rem;
+        line-height: 1.2em;
+        margin-bottom: 0;
+        margin-top: 2.5rem;
+    }
+
+    .cpu-section h3 {
+        font-size: 2.9rem;
+        line-height: 1.2em;
+        margin: 0;
+    }
+
+    .cpu-section p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .cpu-section small {
+        font-size: 1.1rem;
+        position: absolute;
+        top: 40px;
+        left: 30px;
+    }
+
+    .cpu-image {
+        align-self: flex-end;
+    }
+
+    .cpu-image img {
+        padding-left: 0;
+        width: 40rem;
+    }
+
+    .cpu-text {
+        margin-top: 0;
+        padding-right: 0.5rem;
+        padding-left: 2rem;
+    }
+
+    /*gpu section styles*/
+    .gpu-section {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        background-position: center;
+        height: 28rem;
+        position: relative;
+        margin: 2rem;
+    }
+
+    .gpu-section-left h2 {
+        font-size: 2.5rem;
+    }
+
+    .gpu-section-left h3 {
+        font-size: 2.5rem;
+    }
+
+    .gpu-small {
+        font-family: "sf-display-bold";
+        font-size: 1.1rem;
+        position: absolute;
+        top: 40px;
+        left: 30px;
+    }
+
+    .gpu-section-right small {
+        font-size: 1.2rem;
+        font-family: "sf-display-medium";
+    }
+
+    .gpu-section-right p {
+        font-size: 6rem;
+    }
+
+    .gpu-btn {
+        position: absolute;
+        bottom: 1rem;
+        left: 2rem;
+    }
+
+    .grid-group-1 {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        gap: 2rem;
+        margin: 0 2rem 2rem 2rem;
+    }
+
+    .battery-section {
+        margin: 0;
+    }
+
+    .battery-small {
+        font-size: 1.1rem;
+    }
+
+    .battery-section h3 {
+        font-size: 2.5rem;
+        line-height: 1.2em;
+        max-width: 19rem;
+        margin: 3rem auto;
+    }
+
+    .thermal-section {
+        margin: 0;
+        height: auto;
+        padding: 1.5rem 1.5rem;
+    }
+
+    .thermal-text {
+        margin-top: 40%;
+        margin-bottom: auto;
+    }
+
+    .ml-section {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        margin: 3rem 2rem;
+        height: 35rem;
+        position: relative;
+        padding: 3rem 0;
+    }
+
+    .ml-text p {
+        font-size: 1.3rem;
+        max-width: 30rem;
+    }
+
+    .ml-text small {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+    }
+
+    .ml-image img {
+        width: 30rem;
+        margin-left: -12rem;
+    }
+}
+
+/* large devices*/
+@media (min-width: 1024px) {
+    /*header section styles*/
+
+    .banner-links {
+        display: block;
+        color: #cbcbcb;
+        text-decoration: none;
+        font-size: 0.688rem;
+        padding: 0 0.625rem;
+    }
+
+    .banner-links:hover {
+        text-decoration: underline;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .nav-icons {
+        width: 0.9rem;
+        height: 0.9rem;
+    }
+
+    .apple-icon:hover {
+        color: #fff;
+    }
+
+    .banner-menu-link {
+        display: none;
+    }
+
+    nav {
+        padding: 0 1.5rem;
+    }
+
+    nav ul li a:hover {
+        color: #fff;
+    }
+
+    .nav-links {
+        display: block;
+    }
+
+    .nav-btn {
+        font-size: 0.75rem;
+    }
+
+    .banner-links {
+        font-size: 0.75rem;
+    }
+
+    .nav-banner-1 {
+        padding: 0 1.5rem;
+    }
+
+    .nav-banner-2 p {
+        font-size: 0.8rem;
+    }
+
+    .nav-banner-1 p {
+        font-size: 1.3rem;
+    }
+
+    .main-header-text {
+        margin: auto 9rem;
+        padding: 0;
+    }
+
+    .main-header-text p,
+    .m1-section p {
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    }
+
+    .m1-section p {
+        max-width: 44rem;
+    }
+
+    .main-header-text h3 {
+        font-size: 4.5rem;
+    }
+
+    .main-header-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .m1-small {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .apple-2 {
+        width: 4.1rem;
+        height: 4.1rem;
+    }
+
+    .m1-section {
+        margin: 8rem 10rem 0 9rem;
+    }
+
+    .m1-section h2 {
+        font-size: 4.3rem;
+        margin-bottom: 0.625rem;
+    }
+
+    .m1-section h3 {
+        margin: 0;
+        font-size: 4.3rem;
+    }
+
+    .m1-image {
+        margin-top: -5.5rem;
+    }
+
+    .feature-image {
+        padding: 0 5rem;
+    }
+
+    /*cpu section styles*/
+    .cpu-section {
+        padding: 2rem 0 4rem 0;
+        border-radius: 1rem;
+        margin: 0 2rem;
+        height: 45rem;
+    }
+
+    .cpu-section h2 {
+        font-size: 3.3rem;
+        line-height: 1.2em;
+        margin-bottom: 0;
+        margin-top: 3.5rem;
+    }
+
+    .cpu-section h3 {
+        font-size: 3.3rem;
+        line-height: 1.2em;
+        margin: 0;
+    }
+
+    .cpu-section p {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+
+    .cpu-section small {
+        font-size: 1.1rem;
+    }
+
+    .cpu-image {
+        align-self: flex-end;
+    }
+
+    .cpu-image img {
+        width: 40rem;
+    }
+
+    .cpu-text {
+        margin-top: 0;
+        padding-right: 3rem;
+        padding-left: 2rem;
+    }
+
+    /*gpu section styles*/
+    .gpu-section {
+        height: 35rem;
+        align-items: center;
+        position: relative;
+        margin: 2rem;
+        padding: 3rem;
+    }
+
+    .gpu-btn {
+        position: absolute;
+        bottom: 2rem;
+        left: 3rem;
+    }
+
+    .gpu-section-left h2 {
+        font-size: 3.4rem;
+    }
+
+    .gpu-section-left h3 {
+        font-size: 3.4rem;
+    }
+
+    .gpu-section-left small {
+        position: absolute;
+        top: 40px;
+        left: 25px;
+    }
+
+    .gpu-section-left {
+        margin-bottom: 2rem;
+    }
+
+    .gpu-small {
+        font-family: "sf-display-medium";
+        font-size: 1.2rem;
+    }
+
+    .gpu-section-right small {
+        font-size: 1.2rem;
+        font-family: "sf-display-medium";
+    }
+
+    .gpu-section-right p {
+        margin: 0;
+        font-size: 6rem;
+    }
+
+    .grid-group-1 {
+        grid-template-columns: 49% 48%;
+        margin: 2rem;
+    }
+
+    .battery-section {
+        margin: 0;
+    }
+
+    .battery-small {
+        font-size: 1.2rem;
+        top: 2rem;
+        left: 2rem;
+    }
+
+    .battery-section h3 {
+        font-size: 3rem;
+        line-height: 1.2em;
+        max-width: 23rem;
+        margin: 5rem auto;
+    }
+
+    .thermal-section {
+        padding: 2rem 2rem;
+    }
+
+    .thermal-text {
+        font-size: 3rem;
+        margin-top: 30%;
+    }
+
+    .ml-section {
+        height: 40rem;
+    }
+
+    .ml-text p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        max-width: 35rem;
+    }
+
+    .ml-text small {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+    }
+
+    .ml-image img {
+        width: 35rem;
+        margin-left: -40rem;
+    }
+}
+
+/*extra large devices*/
+@media (min-width: 1280px) {
+
+    /*header section styles*/
+    nav {
+        padding: 0 12rem;
+    }
+
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+
+    .nav-banner-1 {
+        padding: 0 12rem;
+    }
+
+    .main-header-text h3 {
+        font-size: 5.8rem;
+    }
+
+    .main-header-text {
+        margin: auto 12rem;
+    }
+
+    .main-header-text p,
+    .m1-section p {
+        font-size: 1.9rem;
+        line-height: 2.6rem;
+    }
+
+    .main-header-text h2 {
+        font-size: 1.938rem;
+    }
+
+    .feature-image {
+        padding: 0 10rem;
+    }
+
+    .m1-small {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    #bi-chevron-right {
+        width: 18px;
+        height: 18px;
+    }
+
+    .apple-2 {
+        width: 4.1rem;
+        height: 4.1rem;
+    }
+
+    .m1-section {
+        margin: 8rem 20rem 0 12rem;
+    }
+
+    .m1-section h2 {
+        font-size: 4.375rem;
+        margin-bottom: 0.625rem;
+    }
+
+    .m1-section h3 {
+        margin: 0;
+        font-size: 4.5rem;
+    }
+
+    .m1-section p {
+        max-width: 50rem;
+    }
+
+    .m1-image {
+        margin-top: -6.5rem;
+    }
+
+    .cpu-section {
+        padding: 2rem 0 4rem 0;
+        border-radius: 1rem;
+        margin: 0 2rem;
+        height: 50rem;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    /*cpu sectio styles*/
+    .cpu-section h2 {
+        font-size: 5rem;
+        line-height: 1.1em;
+        margin-bottom: 0;
+        margin-top: 5rem;
+    }
+
+    .cpu-section h3 {
+        font-size: 5rem;
+        line-height: 1.1em;
+        margin: 0;
+    }
+
+    .cpu-section p {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        margin-right: 4rem;
+    }
+
+    .cpu-section small {
+        font-size: 1.3rem;
+    }
+
+    .cpu-image {
+        padding-left: 2rem;
+        align-self: flex-end;
+    }
+
+    .cpu-image img {
+        padding-left: 0;
+        width: 45rem;
+    }
+
+    .cpu-text {
+        margin-top: 0;
+        padding-right: 0;
+        padding-left: 2rem;
+    }
+
+    /*gpu section styles*/
+    .gpu-section {
+        height: 40rem;
+        align-items: center;
+        grid-template-columns: 50% 50%;
+    }
+
+    .gpu-section-left h2 {
+        font-size: 4.5rem;
+    }
+
+    .gpu-section-left h3 {
+        font-size: 4.5rem;
+    }
+
+    .gpu-section-left {
+        margin-bottom: 2rem;
+    }
+
+    .gpu-small {
+        font-family: "sf-display-medium";
+        font-size: 1.3rem;
+    }
+
+    .gpu-section-right small {
+        font-size: 1.6rem;
+        font-family: "sf-display-medium";
+    }
+
+    .gpu-section-right p {
+        font-size: 9rem;
+    }
+
+    .grid-group-1 {
+        grid-template-columns: 67% 31%;
+        margin: 2rem;
+    }
+
+    .battery-small,
+    .thermal-small {
+        font-size: 1.3rem;
+    }
+
+    .battery-section h3 {
+        font-size: 4.5rem;
+        line-height: 1.2em;
+        max-width: 45rem;
+    }
+
+    .thermal-section {
+        padding: 2rem 2rem;
+    }
+
+    .thermal-text {
+        font-size: 3.5rem;
+        margin-top: 20%;
+    }
+
+    .ml-section {
+        height: 45rem;
+    }
+
+    .ml-text p {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        max-width: 45rem;
+    }
+
+    .ml-text small {
+        font-size: 1.3rem;
+    }
+
+    .ml-image img {
+        width: 40rem;
+        margin-left: -45rem;
+    }
+}
+
+/*desktop computers*/
+@media (min-width: 1536px) {
+    .feature-image-container {
+        margin: 4rem 0;
+    }
+
+    .feature-image {
+        padding: 0 0 0 10rem;
+    }
+
+    .main-header-text h3 {
+        font-size: 6rem;
+    }
+
+    .main-header-text {
+        margin: auto 15rem;
+    }
+
+    .main-header-text p,
+    .m1-section p {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+
+    .main-header-text h2 {
+        font-size: 1.938rem;
+    }
+
+    #bi-chevron-right {
+        width: 20px;
+        height: 20px;
+    }
+
+    .m1-section {
+        margin: 10rem 20rem 0 15rem;
+    }
+
+    .m1-section p {
+        max-width: 60rem;
+    }
+
+    .m1-section h2 {
+        font-size: 4.375rem;
+        margin-bottom: 0.625rem;
+    }
+
+    .m1-section h3 {
+        margin: 0;
+        font-size: 5rem;
+    }
+
+    .m1-icon {
+        width: 180px;
+    }
+
+    .cpu-section h2 {
+        margin-top: 7rem;
+    }
+
+    .gpu-section {
+        height: 45rem;
+    }
+
+    .gpu-btn {
+        font-size: 1.1rem;
+        border-radius: 30px;
+        bottom: 3rem;
+    }
+
+    .gpu-section-left h2 {
+        font-size: 5.1rem;
+        line-height: 1.1em;
+    }
+
+    .gpu-section-left h3 {
+        font-size: 5.1rem;
+        line-height: 1.1em;
+    }
+
+    .gpu-section-left small {
+        position: absolute;
+        top: 40px;
+        left: 25px;
+    }
+
+    .gpu-section-left {
+        margin-bottom: 2rem;
+    }
+
+    .gpu-small {
+        font-family: "sf-display-medium";
+        font-size: 1.3rem;
+    }
+
+    .gpu-section-right small {
+        font-size: 1.5rem;
+        font-family: "sf-display-medium";
+    }
+
+    .gpu-section-right p {
+        margin: 0;
+        font-size: 10rem;
+    }
+
+    .grid-group-1 {
+        grid-template-columns: 68% 30%;
+    }
+
+    .battery-small,
+    .thermal-small {
+        font-size: 1.3rem;
+    }
+
+    .battery-section h3 {
+        font-size: 5rem;
+        line-height: 1.1em;
+        margin-top: 7rem;
+        max-width: 50rem;
+    }
+
+    .thermal-section {
+        padding: 2rem 2rem;
+    }
+
+    .thermal-text {
+        font-size: 4rem;
+        line-height: 0.2em;
+        margin-top: 20%;
+    }
+}
